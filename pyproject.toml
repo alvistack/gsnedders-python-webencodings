@@ -38,7 +38,7 @@ Issues = 'https://github.com/gsnedders/python-webencodings/issues'
 Changelog = 'https://github.com/gsnedders/python-webencodings/releases'
 
 [project.optional-dependencies]
-doc = ['sphinx']
+doc = ['sphinx', 'furo']
 test = ['pytest', 'ruff']
 
 [tool.flit.sdist]

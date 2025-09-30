@@ -39,8 +39,7 @@ def generate(url):
 LABELS = {
 ''']
     labels = [
-        (repr(assert_lower(label)).lstrip('u'),
-         repr(encoding['name'].lower()).lstrip('u'))
+        (repr(assert_lower(label)), repr(encoding['name'].lower()))
         for category in json.loads(urlopen(url).read().decode('ascii'))
         for encoding in category['encodings']
         for label in encoding['labels']]

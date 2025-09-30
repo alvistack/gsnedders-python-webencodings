@@ -16,7 +16,7 @@ import codecs
 from .custom import replacement_codec_info, user_codec_info
 from .labels import LABELS
 
-VERSION = __version__ = '0.6-dev'
+VERSION = __version__ = '0.5.1'
 
 
 PYTHON_NAMES = {
@@ -51,10 +51,10 @@ def ascii_lower(string):
     which also affect non-ASCII characters,
     sometimes mapping them into the ASCII range:
 
-        >>> keyword = u'Bac\\N{KELVIN SIGN}ground'
-        >>> assert keyword.lower() == u'background'
+        >>> keyword = 'Bac\\N{KELVIN SIGN}ground'
+        >>> assert keyword.lower() == 'background'
         >>> assert ascii_lower(keyword) != keyword.lower()
-        >>> assert ascii_lower(keyword) == u'bac\\N{KELVIN SIGN}ground'
+        >>> assert ascii_lower(keyword) == 'bac\\N{KELVIN SIGN}ground'
 
     """
     # This turns out to be faster than unicode.translate()
@@ -145,7 +145,7 @@ def decode(input, fallback_encoding, errors='replace'):
     :param input: A byte string
     :param fallback_encoding:
         An :class:`Encoding` object or a label string.
-        The encoding to use if :obj:`input` does note have a BOM.
+        The encoding to use if :obj:`input` does not have a BOM.
     :param errors: Type of error handling. See :func:`codecs.register`.
     :raises: :exc:`LookupError` for an unknown encoding label.
     :return:
@@ -195,7 +195,7 @@ def iter_decode(input, fallback_encoding, errors='replace'):
         then consumed on demand when the return value is.
     :param fallback_encoding:
         An :class:`Encoding` object or a label string.
-        The encoding to use if :obj:`input` does note have a BOM.
+        The encoding to use if :obj:`input` does not have a BOM.
     :param errors: Type of error handling. See :func:`codecs.register`.
     :raises: :exc:`LookupError` for an unknown encoding label.
     :returns:
@@ -276,7 +276,7 @@ class IncrementalDecoder(object):
 
     :param fallback_encoding:
         An :class:`Encoding` object or a label string.
-        The encoding to use if :obj:`input` does note have a BOM.
+        The encoding to use if :obj:`input` does not have a BOM.
     :param errors: Type of error handling. See :func:`codecs.register`.
     :raises: :exc:`LookupError` for an unknown encoding label.
 
