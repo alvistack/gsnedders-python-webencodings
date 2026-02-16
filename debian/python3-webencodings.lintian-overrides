@@ -1,0 +1,4 @@
+python3-webencodings: copyright-without-copyright-notice
+python3-webencodings: initial-upload-closes-no-bugs
+python3-webencodings: no-manual-page
+python3-webencodings: zero-byte-file-in-doc-directory
