@@ -64,7 +64,7 @@ def ascii_lower(string):
 def lookup(label):
     """Look for an encoding by its label.
 
-    This is the spec’s `get an encoding
+    This is the spec's `get an encoding
     <http://encoding.spec.whatwg.org/#concept-encoding-get>`_ algorithm.
     Supported labels are listed there.
 
@@ -110,7 +110,7 @@ def _get_encoding(encoding_or_label):
     return encoding
 
 
-class Encoding(object):
+class Encoding:
     """A character encoding that can be used for decoding or encoding.
 
     .. attribute:: name
@@ -271,7 +271,7 @@ def _iter_encode_generator(input, encode):
         yield output
 
 
-class IncrementalDecoder(object):
+class IncrementalDecoder:
     """"Push"-based decoder.
 
     :param fallback_encoding:
@@ -321,7 +321,7 @@ class IncrementalDecoder(object):
         return decoder(input, final)
 
 
-class IncrementalEncoder(object):
+class IncrementalEncoder:
     """"Push"-based encoder.
 
     :param encoding: An :class:`Encoding` object or a label string.

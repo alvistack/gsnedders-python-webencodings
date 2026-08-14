@@ -29,7 +29,7 @@ def assert_raises(exception, function, *args, **kwargs):
     except exception:
         return
     else:  # pragma: no cover
-        raise AssertionError('Did not raise %s.' % exception)
+        raise AssertionError('Did not raise %s.', exception)
 
 
 def test_labels():
@@ -41,7 +41,7 @@ def test_labels():
     assert lookup('utf8 ').name == 'utf-8'
     assert lookup(' \r\nutf8\t').name == 'utf-8'
     assert lookup('u8') is None  # Python label.
-    assert lookup('utf-8 ') is None  # Non-ASCII white space.
+    assert lookup('utf-8\N{nbsp}') is None  # Non-ASCII white space.
 
     assert lookup('US-ASCII').name == 'windows-1252'
     assert lookup('iso-8859-1').name == 'windows-1252'
@@ -120,12 +120,12 @@ def test_decode():
 
 
 def test_decode_legacy_cjk():
-    assert decode(b'\x87\x82\x87@ \xedB', "windows-31j") == (
-        "№① 鍈", lookup("shift-jis"))
-    assert decode(b'\xc7g\xc6\xf1\xc6\xfd\xc7g\xc6\xf1\xc6\xfd', "big5-hkscs") == (
-        "むかしむかし", lookup("big5"))
-    assert decode(b'\x8cc\xb9\xe6\xb0\xa2\xc7\xcf', "windows-949") == (
-        "똠방각하", lookup("euc-kr"))
+    assert decode(b'\x87\x82\x87@ \xedB', 'windows-31j') == (
+        '№① 鍈', lookup('shift-jis'))
+    assert decode(b'\xc7g\xc6\xf1\xc6\xfd\xc7g\xc6\xf1\xc6\xfd', 'big5-hkscs') == (
+        'むかしむかし', lookup('big5'))
+    assert decode(b'\x8cc\xb9\xe6\xb0\xa2\xc7\xcf', 'windows-949') == (
+        '똠방각하', lookup('euc-kr'))
     assert decode(b'\x92w', 'big5') == ('㐵', lookup('big5'))
 
 

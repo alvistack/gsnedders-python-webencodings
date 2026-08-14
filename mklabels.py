@@ -52,4 +52,4 @@ LABELS = {
 
 
 if __name__ == '__main__':
-    print(generate('http://encoding.spec.whatwg.org/encodings.json'))
+    print(generate('http://encoding.spec.whatwg.org/encodings.json'))  # noqa: T201
