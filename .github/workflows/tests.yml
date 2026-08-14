@@ -1,4 +1,4 @@
-name: webencoding's tests
+name: Launch tests
 on: [push, pull_request]
 
 jobs:
