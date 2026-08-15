@@ -31,11 +31,12 @@ classifiers = [
 dynamic = ['version']
 
 [project.urls]
-Homepage = 'https://github.com/gsnedders/python-webencodings'
-Documentation = 'http://packages.python.org/webencodings/'
-Code = 'https://github.com/gsnedders/python-webencodings'
-Issues = 'https://github.com/gsnedders/python-webencodings/issues'
-Changelog = 'https://github.com/gsnedders/python-webencodings/releases'
+Homepage = 'https://github.com/CourtBouillon/webencodings'
+Documentation = 'https://doc.courtbouillon.org/webencodings'
+Code = 'https://github.com/CourtBouillon/webencodings'
+Issues = 'https://github.com/CourtBouillon/webencodings/issues'
+Changelog = 'https://github.com/CourtBouillon/webencodings/releases'
+Donation = 'https://opencollective.com/courtbouillon'
 
 [project.optional-dependencies]
 doc = ['sphinx', 'furo']
