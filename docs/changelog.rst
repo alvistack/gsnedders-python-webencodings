@@ -2,6 +2,31 @@ Changelog
 =========
 
 
+v0.6.0
+------
+
+Released on 2026-08-15.
+
+Dependencies:
+
+* Support Python 3.10, 3.11, 3.12, 3.13, 3.14.
+* Drop support of Python 2.6, 2.7, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8 and 3.9.
+
+Packaging:
+
+* Include license file in packages.
+
+Bug fixes:
+
+* Update list of encodings.
+* Use correct CJK Python codecs.
+* Handle "replacement" encoding.
+
+Documentation:
+
+* Reorganize documentation.
+
+
 v0.5.1
 ------
 
@@ -14,7 +39,6 @@ Packaging:
 Bug fixes:
 
 * Use 'utf-8' as encoding instead of 'utf8'.
-
 
 
 v0.5
