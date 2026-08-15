@@ -2,6 +2,16 @@ Changelog
 =========
 
 
+v0.6.1
+------
+
+Released on 2026-08-15.
+
+Packaging:
+
+* Update links on PyPI.
+
+
 v0.6.0
 ------
 

@@ -16,7 +16,7 @@ import codecs
 from .custom import replacement_codec_info, user_codec_info
 from .labels import LABELS
 
-VERSION = __version__ = '0.6.0'
+VERSION = __version__ = '0.6.1'
 
 
 PYTHON_NAMES = {
