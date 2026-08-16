@@ -1,0 +1,5 @@
+python-webencodings source: file-without-copyright-information
+python-webencodings source: no-debian-changes
+python-webencodings source: source-contains-prebuilt-windows-binary
+python-webencodings source: source-is-missing
+python-webencodings source: source-package-encodes-python-version
